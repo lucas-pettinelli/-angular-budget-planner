@@ -1,1 +1,19 @@
-<p>side-nav works!</p>
+<nav>
+    <h2>Lorem, ipsum.</h2>
+</nav>
+
+<div>
+    <div class="toggle-button-row" (click)="toggleSlideOut()">
+        <mat-icon>menu</mat-icon>
+    </div>
+</div>
+
+<div class="slide-out-panel" [class.slide-out]="isSlideOut">
+    <div class="slide-out-content">
+        <h3>Budget Planner</h3>
+        <li class="edit-col" (click)="onDash()">Dashboard</li>
+        <li class="edit-col" (click)="onProfile()">Perfil</li>
+        <li class="edit-col" (click)="onHistory()">Histórico</li>
+        <li class="edit-col" (click)="onLogout()">Sair</li>
+    </div>
+</div>
