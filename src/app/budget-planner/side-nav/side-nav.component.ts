@@ -1,19 +1,25 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faUser, faChartSimple, faClock, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-side-nav',
   standalone: true,
-  imports: [MatIconModule],
+  imports: [MatIconModule, FontAwesomeModule],
   templateUrl: './side-nav.component.html',
   styleUrl: './side-nav.component.css'
 })
 export class SideNavComponent {
 
+  iconUser = faUser;
+  iconChart = faChartSimple;
+  iconHistory = faClock;
+  iconLogout = faRightFromBracket;
   isSlideOut = true;
 
-  toggleSlideOut():void{
+  toggleSlideOut(): void {
     this.isSlideOut = !this.isSlideOut;
   }
 

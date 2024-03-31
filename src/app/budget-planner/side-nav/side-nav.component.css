@@ -32,6 +32,8 @@ nav h2 {
 }
 
 .edit-col {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     font-size: 18px;
     padding: 10px;
@@ -72,6 +74,10 @@ nav h2 {
     text-align: center;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+fa-icon{
+    margin: 0 0 0 10px;
 }
 
 li {
