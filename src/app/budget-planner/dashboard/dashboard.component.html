@@ -1,0 +1,53 @@
+<app-side-nav></app-side-nav>
+<div class="container">
+    <div class="card-container">
+
+        <!--Card Income-->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon income-icon">
+                    <fa-icon [icon]="iconMoney"></fa-icon>
+                </span>
+                <h2>Um titulo comum</h2>
+            </div>
+            <hr>
+            <div class="income-details">
+                <div class="month">
+                    <h3>Lorem.</h3>
+                    <ul>
+                        <li *ngFor="let monthIncome of lastMonthsIncome">{{ monthIncome }}</li>
+                    </ul>
+                </div>
+                <div class="month">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>{{ currentMonthIconme }}</p>
+                </div>
+                <button (click)="onIncome()">Visualizar</button>
+            </div>
+        </div>
+
+         <!--Card Expense-->
+         <div class="card">
+            <div class="card-header">
+                <span class="icon income-icon">
+                    <fa-icon [icon]="iconMoney"></fa-icon>
+                </span>
+                <h2>Um titulo dois</h2>
+            </div>
+            <hr>
+            <div class="income-details">
+                <div class="month">
+                    <h3>Lorem.</h3>
+                    <ul>
+                        <li *ngFor="let monthExpense of lastMonthsExpense">{{ monthExpense }}</li>
+                    </ul>
+                </div>
+                <div class="month">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>{{ currentMonthExpense }}</p>
+                </div>
+                <button (click)="onExpense()">Visualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
