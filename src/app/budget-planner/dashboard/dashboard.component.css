@@ -14,6 +14,8 @@
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     background-color: #f9f9f9;
     width: calc(50% - 40px);
     border-radius: 10px;
@@ -23,18 +25,18 @@
     transition: 0.3s ease-in-out;
 }
 
-.card:hover{
+.card:hover {
     background-color: #fff;
     transform: translateY(-7px);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card-header{
+.card-header {
     display: flex;
     align-items: center;
 }
 
-.icon{
+.icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,12 +46,68 @@
     border-radius: 50%;
     font-size: 32px;
     margin-right: 50px;
+    padding: 10px;
+    text-align: center;
+}
+.income-icon{
+    color:#f9f9f9;
+    background-color: #81b4eb;
+}
+.todo-icon{
+    color:#f9f9f9;
+    background-color: #81b4eb;
+}
+.expense-icon{
+    color:#f9f9f9;
+    background-color: #81b4eb;
 }
 
-ul li{
+.total-icon{
+    color: #f9f9f9;
+    background-color: #81b4eb;
+}
+
+.trans-icon{
+    color: #f9f9f9;
+    background-color: #81b4eb;
+}
+
+ul li {
+    display: flex;
     list-style-type: none;
 }
 
-.month h3{
+h3 {
     margin: 10px 0 10px;
+}
+
+hr{
+    margin: 5px 0;
+}
+
+.month{
+    display: flex;
+    flex-direction: column;
+}
+
+.total-item{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.transactions-status{
+    margin-right: 5px;
+    color: #353535;
+}
+
+button{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: #010101;
+    color: #f9f9f9;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin-top: 10px;
 }

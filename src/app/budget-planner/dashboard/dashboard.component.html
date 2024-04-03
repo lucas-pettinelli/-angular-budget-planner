@@ -8,46 +8,105 @@
                 <span class="icon income-icon">
                     <fa-icon [icon]="iconMoney"></fa-icon>
                 </span>
-                <h2>Um titulo comum</h2>
+                <h2>Renda</h2>
             </div>
             <hr>
             <div class="income-details">
                 <div class="month">
-                    <h3>Lorem.</h3>
+                    <h3>Últimos meses</h3>
                     <ul>
                         <li *ngFor="let monthIncome of lastMonthsIncome">{{ monthIncome }}</li>
                     </ul>
                 </div>
                 <div class="month">
-                    <h3>Lorem, ipsum.</h3>
+                    <h3>Mês atual</h3>
                     <p>{{ currentMonthIconme }}</p>
                 </div>
                 <button (click)="onIncome()">Visualizar</button>
             </div>
         </div>
 
-         <!--Card Expense-->
-         <div class="card">
+        <!--Card Expense-->
+        <div class="card">
             <div class="card-header">
-                <span class="icon income-icon">
-                    <fa-icon [icon]="iconMoney"></fa-icon>
+                <span class="icon expense-icon">
+                    <fa-icon [icon]="iconExpense"></fa-icon>
                 </span>
-                <h2>Um titulo dois</h2>
+                <h2>Despesas</h2>
             </div>
             <hr>
             <div class="income-details">
                 <div class="month">
-                    <h3>Lorem.</h3>
+                    <h3>Últimos meses</h3>
                     <ul>
                         <li *ngFor="let monthExpense of lastMonthsExpense">{{ monthExpense }}</li>
                     </ul>
                 </div>
                 <div class="month">
-                    <h3>Lorem, ipsum.</h3>
+                    <h3>Mês atual</h3>
                     <p>{{ currentMonthExpense }}</p>
                 </div>
                 <button (click)="onExpense()">Visualizar</button>
             </div>
+        </div>
+
+        <!--To do Transactions-->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon todo-icon">
+                    <fa-icon [icon]="iconTrans"></fa-icon>
+                </span>
+                <h2>Transações</h2>
+            </div>
+            <hr>
+            <ul>
+                <br>
+                <li *ngFor="let item of todoTransactions">
+                    <span class="transactions-status">
+                        <fa-icon [icon]="iconMoneyTrans"></fa-icon>
+                    </span>
+                    <span class="transactions-details">{{item.description}}</span>
+                </li>
+            </ul>
+            <div>
+                <button (click)=" onTodo()">Visualizar</button>
+            </div>
+        </div>
+
+        <!-- Total -->
+        <div class="card">
+            <div class="card-header">
+                <span class="icon total-icon">
+                    <fa-icon [icon]="iconTotal"></fa-icon>
+                </span>
+                <h2>Total</h2>
+            </div>
+            <hr>
+            <div class="total-details">
+                <div class="total-item">
+                    <span class="icon income-icon">
+                        <fa-icon [icon]="iconMoney"></fa-icon>
+                    </span>
+                    <h3>Renda atual do mês</h3>
+                    <p>{{ totalCurrentMonthIncome | currency: 'R$ ' }}</p>
+                </div>
+                <div class="total-item">
+                    <span class="icon expense-icon">
+                        <fa-icon [icon]="iconExpense"></fa-icon>
+                    </span>
+                    <h3>Despesa do mês</h3>
+                    <p>{{totalCurrentMonthExpense | currency: 'R$ '}}</p>
+                </div>
+                <hr class="total-line">
+                <div class="total-line">
+                    <span class="icon trans-icon">
+                        <fa-icon [icon]="iconSavings"></fa-icon>
+                    </span>
+                    <h3>Econômia do mês atual</h3>
+                    <p>{{currentMonthSavings | currency: 'R$ '}}</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
